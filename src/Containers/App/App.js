@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 
 class App extends Component {
 	render() {
-		return <div>Money Check</div>;
+		return (
+			<div>
+				<h2>Money Check</h2>
+			</div>
+		);
 	}
 }
 

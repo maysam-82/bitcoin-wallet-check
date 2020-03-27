@@ -2,6 +2,8 @@
 
 exports[`App Component should render App properly 1`] = `
 "<div>
-  Money Check
+  <h2>
+    Money Check
+  </h2>
 </div>"
 `;
