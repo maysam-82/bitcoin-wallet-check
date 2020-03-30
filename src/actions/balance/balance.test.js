@@ -12,7 +12,7 @@ it('should create an action to deposit into the balance', () => {
 	expect(actionsCreators.setDeposite(depositValue)).toEqual(expectedAction);
 });
 it('should create an action to withdraw from the balance', () => {
-	const withdrawValue = 10;
-	const expectedAction = { type: actionTypes.SET_WITHDRAW, withdrawal: withdrawValue };
-	expect(actionsCreators.setWithdraw(withdrawValue)).toEqual(expectedAction);
+	const withdrawal = 10;
+	const expectedAction = { type: actionTypes.SET_WITHDRAW, withdrawal };
+	expect(actionsCreators.setWithdraw(withdrawal)).toEqual(expectedAction);
 });
