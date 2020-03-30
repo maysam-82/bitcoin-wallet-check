@@ -12,8 +12,8 @@ const balance = (state = initialState, action) => {
 			const { deposite } = action;
 			return { ...state, balanceValue: balanceValue + deposite };
 		case actionTypes.SET_WITHDRAW:
-			const { withdraw } = action;
-			return { ...state, balanceValue: balanceValue - withdraw };
+			const { withdrawal } = action;
+			return { ...state, balanceValue: balanceValue - withdrawal };
 
 		default:
 			return state;
