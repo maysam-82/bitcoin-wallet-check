@@ -13,7 +13,7 @@ export class Wallet extends Component {
 }
 
 const mapStateToProps = state => {
-	return { balance: state };
+	return { balance: state.balance.balanceValue };
 };
 
 export default connect(mapStateToProps)(Wallet);
