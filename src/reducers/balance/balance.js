@@ -1,5 +1,8 @@
 import * as actionTypes from '../../actions/actionTypes';
-const balance = (state = {}, action) => {
+const initialState = {
+	balanceValue: 0,
+};
+const balance = (state = initialState, action) => {
 	switch (action.type) {
 		case actionTypes.SET_BALANCE:
 			return action.balance;
