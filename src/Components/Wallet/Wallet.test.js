@@ -3,7 +3,9 @@ import { shallow } from 'enzyme';
 import { Wallet } from './Wallet';
 
 describe('Wallet Component', () => {
-	const props = { balance: 20 };
+	const mockDeposite = jest.fn();
+	const mockWithdrawal = jest.fn();
+	const props = { balance: 20, deposite: mockDeposite, withdraw: mockWithdrawal };
 	const wrapper = shallow(<Wallet {...props} />);
 	it('should render Wallet component correctly', () => {
 		expect(wrapper.debug()).toMatchSnapshot();
@@ -21,6 +23,22 @@ describe('Wallet Component', () => {
 		});
 		it('should update `moneyAmount` in `state`', () => {
 			expect(wrapper.state().moneyAmount).toEqual(parseInt(amountOfMoney));
+		});
+		describe('and the user wants to make a deposite into balance', () => {
+			beforeEach(() => {
+				wrapper.find('.btn-deposite').simulate('click');
+			});
+			it('should despatch the `setDeposite()` it receives from props with moneyAmount in local `state`', () => {
+				expect(mockDeposite).toHaveBeenCalledWith(parseInt(amountOfMoney));
+			});
+		});
+		describe('and the user wants to make a withdrawal from balance', () => {
+			beforeEach(() => {
+				wrapper.find('.btn-withdraw').simulate('click');
+			});
+			it('should despatch the `setWithdraw()` it receives from props with moneyAmount in local `state`', () => {
+				expect(mockWithdrawal).toHaveBeenCalledWith(parseInt(amountOfMoney));
+			});
 		});
 	});
 });

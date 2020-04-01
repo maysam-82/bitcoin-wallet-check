@@ -7,5 +7,11 @@ exports[`Wallet Component should render Wallet component correctly 1`] = `
     20
   </h2>
   <input className=\\"input-money\\" onChange={[Function]} />
+  <button className=\\"btn-deposite\\" onClick={[Function: onClick]}>
+    Deposite
+  </button>
+  <button className=\\"btn-withdraw\\" onClick={[Function: onClick]}>
+    Withdraw
+  </button>
 </div>"
 `;
