@@ -1,17 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Wallet Component should render Wallet component correctly 1`] = `
-"<div>
+"<div className=\\"wallet-container\\">
   <h2 className=\\"balance\\">
     Money Balance: 
     20
   </h2>
-  <input className=\\"input-money\\" onChange={[Function]} value={0} />
-  <button className=\\"btn-deposite\\" onClick={[Function: onClick]}>
-    Deposite
-  </button>
-  <button className=\\"btn-withdraw\\" onClick={[Function: onClick]}>
-    Withdraw
-  </button>
+  <div className=\\"input-container\\">
+    <input className=\\"input-money\\" onChange={[Function]} value={0} />
+  </div>
+  <div className=\\"button-container\\">
+    <button className=\\"btn-deposite\\" onClick={[Function: onClick]}>
+      Deposite
+    </button>
+  </div>
+  <div className=\\"button-container\\">
+    <button className=\\"btn-withdraw\\" onClick={[Function: onClick]}>
+      Withdraw
+    </button>
+  </div>
 </div>"
 `;

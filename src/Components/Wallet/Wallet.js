@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setDeposite, setWithdraw } from '../../actions/balance/balance';
+import './wallet.scss';
 
 export class Wallet extends Component {
 	constructor(props) {
@@ -18,27 +19,33 @@ export class Wallet extends Component {
 		const { balance, withdraw, deposite } = this.props;
 		const { moneyAmount } = this.state;
 		return (
-			<div>
+			<div className="wallet-container">
 				<h2 className="balance">Money Balance: {balance}</h2>
-				<input className="input-money" onChange={this.onMoneyChanged} value={moneyAmount} />
-				<button className="btn-deposite" onClick={() => deposite(moneyAmount)}>
-					Deposite
-				</button>
-				<button className="btn-withdraw" onClick={() => withdraw(moneyAmount)}>
-					Withdraw
-				</button>
+				<div className="input-container">
+					<input className="input-money" onChange={this.onMoneyChanged} value={moneyAmount} />
+				</div>
+				<div className="button-container">
+					<button className="btn-deposite" onClick={() => deposite(moneyAmount)}>
+						Deposite
+					</button>
+				</div>
+				<div className="button-container">
+					<button className="btn-withdraw" onClick={() => withdraw(moneyAmount)}>
+						Withdraw
+					</button>
+				</div>
 			</div>
 		);
 	}
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
 	return { balance: state.balance.balanceValue };
 };
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
 	return {
-		deposite: deposite => dispatch(setDeposite(deposite)),
-		withdraw: withdrawal => dispatch(setWithdraw(withdrawal)),
+		deposite: (deposite) => dispatch(setDeposite(deposite)),
+		withdraw: (withdrawal) => dispatch(setWithdraw(withdrawal)),
 	};
 };
 
