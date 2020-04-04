@@ -6,7 +6,7 @@ exports[`Wallet Component should render Wallet component correctly 1`] = `
     Money Balance: 
     20
   </h2>
-  <input className=\\"input-money\\" onChange={[Function]} />
+  <input className=\\"input-money\\" onChange={[Function]} value={0} />
   <button className=\\"btn-deposite\\" onClick={[Function: onClick]}>
     Deposite
   </button>

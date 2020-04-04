@@ -20,7 +20,7 @@ export class Wallet extends Component {
 		return (
 			<div>
 				<h2 className="balance">Money Balance: {balance}</h2>
-				<input className="input-money" onChange={this.onMoneyChanged} />
+				<input className="input-money" onChange={this.onMoneyChanged} value={moneyAmount} />
 				<button className="btn-deposite" onClick={() => deposite(moneyAmount)}>
 					Deposite
 				</button>
