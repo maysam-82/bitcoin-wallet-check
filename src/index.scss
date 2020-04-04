@@ -1,0 +1,23 @@
+html {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	font-size: 0.75rem;
+	padding: 0.625rem;
+	border: 1px solid transparent;
+}
+
+input {
+	padding: 0.625rem;
+	font-size: 0.75rem;
+	border: 1px solid transparent;
+	background-color: #ccc;
+}
