@@ -7,7 +7,7 @@ exports[`Wallet Component should render Wallet component correctly 1`] = `
     20
   </h2>
   <div className=\\"input-container\\">
-    <input className=\\"input-money\\" onChange={[Function]} value={0} />
+    <input className=\\"input-money\\" onChange={[Function]} value=\\"0\\" />
   </div>
   <div className=\\"button-container\\">
     <button className=\\"btn-deposite\\" onClick={[Function: onClick]}>

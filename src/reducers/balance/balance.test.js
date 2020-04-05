@@ -21,7 +21,6 @@ describe('balanceReducer', () => {
 		});
 
 		it('should get balance from cookies and set to `state` ', () => {
-			console.log(getBalance(initialState, BALANCE_COOKIE));
 			expect(balanceReducer(getBalance(initialState, BALANCE_COOKIE), {})).toEqual(initialState);
 		});
 	});

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bitcoin Component should render Bitcoin component correctly 1`] = `
+"<h3>
+  Bitcoin Balance: 
+</h3>"
+`;

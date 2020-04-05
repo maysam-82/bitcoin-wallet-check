@@ -10,4 +10,7 @@ describe('App Component', () => {
 	it('should render `Connect(Wallet)` component', () => {
 		expect(wrapper.find('Connect(Wallet)').exists()).toBe(true);
 	});
+	it('should render `Connect(Bitcoin)` component', () => {
+		expect(wrapper.find('Connect(Bitcoin)').exists()).toBe(true);
+	});
 });
