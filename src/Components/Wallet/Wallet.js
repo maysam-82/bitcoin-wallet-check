@@ -12,7 +12,7 @@ export class Wallet extends Component {
 		};
 	}
 	onMoneyChanged = ({ target: { value } }) => {
-		const moneyAmount = parseInt(value);
+		const moneyAmount = value ? parseInt(value) : 0;
 		this.setState({ moneyAmount });
 	};
 	render() {
@@ -22,7 +22,7 @@ export class Wallet extends Component {
 			<div className="wallet-container">
 				<h2 className="balance">Money Balance: {balance}</h2>
 				<div className="input-container">
-					<input className="input-money" onChange={this.onMoneyChanged} value={moneyAmount} />
+					<input className="input-money" onChange={this.onMoneyChanged} value={moneyAmount.toString()} />
 				</div>
 				<div className="button-container">
 					<button className="btn-deposite" onClick={() => deposite(moneyAmount)}>
