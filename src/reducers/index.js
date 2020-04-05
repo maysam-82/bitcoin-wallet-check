@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import balanceReducer from './balance/balance';
-export default combineReducers({
-	balance: balanceReducer,
-});
+import balance from './balance/balance';
+import bitcoin from './bitcoin/bitcoin';
+export default combineReducers({ balance, bitcoin });
