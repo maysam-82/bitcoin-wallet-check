@@ -7,7 +7,7 @@ const bitcoin = (state = {}, action) => {
 			return bitcoin;
 
 		default:
-			state;
+			return state;
 	}
 };
 
