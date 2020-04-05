@@ -13,4 +13,7 @@ describe('App Component', () => {
 	it('should render `Connect(Bitcoin)` component', () => {
 		expect(wrapper.find('Connect(Bitcoin)').exists()).toBe(true);
 	});
+	it('should contain a link to the coindesk price page', () => {
+		expect(wrapper.find('a').props().href).toBe('https://www.coindesk.com/price/bitcoin');
+	});
 });
